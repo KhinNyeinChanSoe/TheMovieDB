@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_popular">
+
+    <fragment
+        android:id="@+id/nav_popular"
+        android:name="com.dora2000.themoviedb.ui.popular.PopularFragment"
+        android:label="Popular"
+        tools:layout="@layout/fragment_popular" />
+
+    <fragment
+        android:id="@+id/nav_nowPlaying"
+        android:name="com.dora2000.themoviedb.ui.now_playing.NowPlayingFragment"
+        android:label="Now Playing"
+        tools:layout="@layout/fragment_nowplaying" />
+
+    <fragment
+        android:id="@+id/nav_topRated"
+        android:name="com.dora2000.themoviedb.ui.top_rated.TopRatedFragment"
+        android:label="Top Rated"
+        tools:layout="@layout/fragment_top_rated" />
+
+    <fragment
+        android:id="@+id/nav_upcoming"
+        android:name="com.dora2000.themoviedb.ui.upcoming.UpcomingFragment"
+        android:label="Upcoming" />
+</navigation>
