@@ -1,7 +1,10 @@
 package com.dora2000.themoviedb
 
+import android.app.SearchManager
+import android.content.Context
 import android.os.Bundle
 import android.view.Menu
+import android.widget.SearchView
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -15,6 +18,7 @@ import androidx.appcompat.widget.Toolbar
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var searchView: SearchView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +41,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
+
+        val menuItem = menu.findItem(R.id.action_search)
+        val searchManager = applicationContext?.getSystemService(Context.SEARCH_SERVICE) as SearchManager
+        searchView = menuItem.actionView as SearchView
+        searchView.queryHint = "Enter Movie Name"
+        
         return true
     }
 

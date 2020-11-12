@@ -9,13 +9,21 @@
         android:id="@+id/nav_popular"
         android:name="com.dora2000.themoviedb.ui.popular.PopularFragment"
         android:label="Popular"
-        tools:layout="@layout/fragment_popular" />
+        tools:layout="@layout/fragment_popular" >
+        <action
+            android:id="@+id/action_nav_popular_to_popularDetailsFragment"
+            app:destination="@id/popularDetailsFragment2" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_nowPlaying"
         android:name="com.dora2000.themoviedb.ui.now_playing.NowPlayingFragment"
         android:label="Now Playing"
-        tools:layout="@layout/fragment_nowplaying" />
+        tools:layout="@layout/fragment_nowplaying" >
+        <action
+            android:id="@+id/action_nav_nowPlaying_to_nowPlayingDetailsFragment"
+            app:destination="@id/nowPlayingDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_topRated"
@@ -27,4 +35,24 @@
         android:id="@+id/nav_upcoming"
         android:name="com.dora2000.themoviedb.ui.upcoming.UpcomingFragment"
         android:label="Upcoming" />
+    <fragment
+        android:id="@+id/nowPlayingDetailsFragment"
+        android:name="com.dora2000.themoviedb.ui.nowPlayingDetails.NowPlayingDetailsFragment"
+        android:label="fragment_now_playing_details"
+        tools:layout="@layout/fragment_now_playing_details" >
+        <argument
+            android:name="nowplaying_results_item_object"
+            app:argType="com.dora2000.themoviedb.model.NowPlayingResultsItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/popularDetailsFragment2"
+        android:name="com.dora2000.themoviedb.ui.popularDetails.PopularDetailsFragment"
+        android:label="fragment_popular_details"
+        tools:layout="@layout/fragment_popular_details" >
+        <argument
+            android:name="popular_results_item_object"
+            app:argType="com.dora2000.themoviedb.model.PopularResultsItem" />
+    </fragment>
+
+
 </navigation>
