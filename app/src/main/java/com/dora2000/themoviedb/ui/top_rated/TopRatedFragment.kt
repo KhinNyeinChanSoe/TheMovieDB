@@ -15,12 +15,12 @@ class TopRatedFragment : Fragment() {
     private lateinit var topRatedViewModel: TopRatedViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         topRatedViewModel =
-                ViewModelProvider(this).get(TopRatedViewModel::class.java)
+            ViewModelProvider(this).get(TopRatedViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_top_rated, container, false)
         val textView: TextView = root.findViewById(R.id.text_slideshow)
         topRatedViewModel.text.observe(viewLifecycleOwner, Observer {
