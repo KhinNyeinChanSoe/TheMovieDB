@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp">
-
     <androidx.cardview.widget.CardView
         android:layout_width="200dp"
         android:layout_height="280dp"
@@ -12,12 +11,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="200dp"
             android:layout_height="280dp"
             android:background="@color/appbar_color">
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv_image"
                 android:layout_width="200dp"
@@ -25,20 +22,17 @@
                 app:cardCornerRadius="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
-
                 <ImageView
                     android:id="@+id/img_poster"
                     android:layout_width="200dp"
                     android:layout_height="240dp"
                     android:scaleType="centerCrop"/>
             </androidx.cardview.widget.CardView>
-
             <TextView
                 android:id="@+id/txt_movie_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:textColor="#FFFFFF"
                 android:textSize="13sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
