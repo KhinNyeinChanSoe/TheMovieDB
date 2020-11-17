@@ -1,8 +1,11 @@
 package com.dora2000.themoviedb.ui.now_playing
 
 
+import android.app.SearchManager
+import android.content.Context
 import android.os.Bundle
 import android.view.*
+import android.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -10,12 +13,14 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.dora2000.themoviedb.R
 import com.dora2000.themoviedb.model.NowPlayingResultsItem
+import com.dora2000.themoviedb.ui.search.SearchFragment
 import kotlinx.android.synthetic.main.fragment_nowplaying.*
 
 class NowPlayingFragment : Fragment(),NowPlayingAdapter.ClickListener_NowPlaying {
 
     private lateinit var nowPlayingViewModel: NowPlayingViewModel
     private lateinit var nowPlayingAdapter: NowPlayingAdapter
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,6 +32,7 @@ class NowPlayingFragment : Fragment(),NowPlayingAdapter.ClickListener_NowPlaying
     override fun onCreate(savedInstanceState: Bundle?) {
         setHasOptionsMenu(true)
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -78,13 +84,28 @@ class NowPlayingFragment : Fragment(),NowPlayingAdapter.ClickListener_NowPlaying
         findNavController().navigate(nowPlayingDirection)
     }
 
-
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when(item.itemId){
-//            R.id.action_search ->return false
+//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+//        super.onCreateOptionsMenu(menu, inflater)
+//        inflater.inflate(R.menu.main,menu)
+//        val searchItem = menu.findItem(R.id.action_search)
+//        val searchManager = activity?.getSystemService(Context.SEARCH_SERVICE) as SearchManager
+//        if (searchItem!= null){
+//            nowplaying_searchView = searchItem.actionView as SearchView
+//
 //        }
-//        searchView.setOnQueryTextListener(queryTextListener)
-//        return super.onOptionsItemSelected(item)
+//        if (nowplaying_searchView!=null){
+//            nowplaying_searchView.setSearchableInfo(searchManager.getSearchableInfo(requireActivity().componentName))
+//            nowplaying_searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+//                override fun onQueryTextSubmit(query: String?): Boolean {
+//
+//                }
+//
+//                override fun onQueryTextChange(newText: String?): Boolean {
+//                    return false
+//                }
+//
+//            })
+//        }
 //    }
 
 }

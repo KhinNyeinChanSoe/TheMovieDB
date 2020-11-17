@@ -12,7 +12,8 @@
         tools:layout="@layout/fragment_popular" >
         <action
             android:id="@+id/action_nav_popular_to_popularDetailsFragment"
-            app:destination="@id/popularDetailsFragment" />
+            app:destination="@id/popularDetailsFragment2" />
+
     </fragment>
 
     <fragment
@@ -23,26 +24,19 @@
         <action
             android:id="@+id/action_nav_nowPlaying_to_nowPlayingDetailsFragment"
             app:destination="@id/nowPlayingDetailsFragment" />
+
     </fragment>
 
     <fragment
         android:id="@+id/nav_topRated"
         android:name="com.dora2000.themoviedb.ui.top_rated.TopRatedFragment"
         android:label="Top Rated"
-        tools:layout="@layout/fragment_top_rated" >
-        <action
-            android:id="@+id/action_nav_topRated_to_topRatedDetailsFragment"
-            app:destination="@id/topRatedDetailsFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_top_rated" />
 
     <fragment
         android:id="@+id/nav_upcoming"
         android:name="com.dora2000.themoviedb.ui.upcoming.UpcomingFragment"
-        android:label="Upcoming" >
-        <action
-            android:id="@+id/action_nav_upcoming_to_upcomingDetailsFragment"
-            app:destination="@id/upcomingDetailsFragment" />
-    </fragment>
+        android:label="Upcoming" />
     <fragment
         android:id="@+id/nowPlayingDetailsFragment"
         android:name="com.dora2000.themoviedb.ui.nowPlayingDetails.NowPlayingDetailsFragment"
@@ -53,7 +47,7 @@
             app:argType="com.dora2000.themoviedb.model.NowPlayingResultsItem" />
     </fragment>
     <fragment
-        android:id="@+id/popularDetailsFragment"
+        android:id="@+id/popularDetailsFragment2"
         android:name="com.dora2000.themoviedb.ui.popularDetails.PopularDetailsFragment"
         android:label="fragment_popular_details"
         tools:layout="@layout/fragment_popular_details" >
@@ -62,23 +56,10 @@
             app:argType="com.dora2000.themoviedb.model.PopularResultsItem" />
     </fragment>
     <fragment
-        android:id="@+id/topRatedDetailsFragment"
-        android:name="com.dora2000.themoviedb.ui.topRatedDetails.TopRatedDetailsFragment"
-        android:label="fragment_top_rated_details"
-        tools:layout="@layout/fragment_top_rated_details">
-        <argument
-            android:name="top_rated_results_item_object"
-            app:argType="com.dora2000.themoviedb.model.TopRatedResultsItem" />
-    </fragment>
-    <fragment
-        android:id="@+id/upcomingDetailsFragment"
-        android:name="com.dora2000.themoviedb.ui.upcomingDetails.UpcomingDetailsFragment"
-        android:label="fragment_upcoming_details"
-        tools:layout="@layout/fragment_upcoming_details" >
-        <argument
-            android:name="upcoming_results_item_object"
-            app:argType="com.dora2000.themoviedb.model.UpcomingResultsItem" />
-    </fragment>
+        android:id="@+id/nav_search"
+        android:name="com.dora2000.themoviedb.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
 
 
 </navigation>
