@@ -18,7 +18,7 @@ class PopularAdapter : RecyclerView.Adapter<PopularAdapter.PopularViewHolder>() 
             itemView.setOnClickListener(this)
         }
        lateinit var popularItem: PopularResultsItem
-        val BASE_URL = "https://image.tmdb.org/t/p/w500/"
+        private val BASE_URL = "https://image.tmdb.org/t/p/w500/"
         fun bind(resultsItem: PopularResultsItem) {
             this.popularItem = resultsItem
             itemView.txt_movie_name.text = resultsItem.title

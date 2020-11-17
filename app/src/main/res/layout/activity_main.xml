@@ -23,6 +23,12 @@
         app:headerLayout="@layout/nav_header_main"
         app:itemTextColor="@color/appbar_color"
         app:menu="@menu/activity_main_drawer" />
+<!--    <fragment-->
+<!--        android:id="@+id/container_search"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:visibility="invisible"-->
+<!--        />-->
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

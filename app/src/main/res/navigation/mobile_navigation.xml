@@ -13,6 +13,7 @@
         <action
             android:id="@+id/action_nav_popular_to_popularDetailsFragment"
             app:destination="@id/popularDetailsFragment2" />
+
     </fragment>
 
     <fragment
@@ -23,6 +24,7 @@
         <action
             android:id="@+id/action_nav_nowPlaying_to_nowPlayingDetailsFragment"
             app:destination="@id/nowPlayingDetailsFragment" />
+
     </fragment>
 
     <fragment
@@ -53,6 +55,11 @@
             android:name="popular_results_item_object"
             app:argType="com.dora2000.themoviedb.model.PopularResultsItem" />
     </fragment>
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.dora2000.themoviedb.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
 
 
 </navigation>
