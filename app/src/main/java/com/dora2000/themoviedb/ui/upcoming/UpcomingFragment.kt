@@ -73,18 +73,11 @@ class UpcomingFragment : Fragment(),UpcomingAdapter.ClickListener_Upcoming {
         upcomingViewModel.loadResult()
     }
 
-    override fun onClick(nowPlayingResultsItem: UpcomingResultsItem) {
-        val nowPlayingDirection = UpcomingFragmentDirections.actionNavUpcomingToUpcomingDetailsFragment(nowPlayingResultsItem)
+    override fun onClick(up_coming_item: UpcomingResultsItem) {
+        val nowPlayingDirection = UpcomingFragmentDirections.actionNavUpcomingToUpcomingDetailsFragment(up_coming_item)
         findNavController().navigate(nowPlayingDirection)
     }
 
 
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when(item.itemId){
-//            R.id.action_search ->return false
-//        }
-//        searchView.setOnQueryTextListener(queryTextListener)
-//        return super.onOptionsItemSelected(item)
-//    }
 
 }
